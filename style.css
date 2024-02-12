@@ -3,16 +3,20 @@ body{
     background-color: rgb(76, 119, 180);
     margin: 0;
     padding: 0;
-    display: flex;
     align-items: center;
     justify-content: center;
     height: 60vh;
 }
     
 .container{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
     padding: 20px;
+    width: 30%;
     background-color: white;
     border-radius: 10px;
+    margin: 3rem auto;
 }
     
 .inputContainer{
