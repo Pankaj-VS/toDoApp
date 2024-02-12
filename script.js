@@ -34,19 +34,18 @@ document.getElementById('task').addEventListener('keypress', function(event) {
     }
 });
 
-// Adding tasks.
 function addTask() {
-    let taskInput = document.getElementById('task').value;
+    let taskInput = document.getElementById('task');
     
-    if (taskInput.trim() !== '') {
+    if (taskInput.value.trim() !== '') {
         let newTask = document.createElement('li');
         newTask.classList.add('task-item');
         newTask.innerHTML = `
-            <span>${taskInput}</span>
+            <span>${taskInput.value}</span>
             <button class="deleteButton">Delete</button>
         `;
         taskList.appendChild(newTask);
-        taskInput = '';
+        taskInput.value = "";
     } else {
         window.alert('Invalid Input !!! - Text Field is Empty');
         return;
