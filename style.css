@@ -45,6 +45,7 @@ button{
     
 Button:hover {
     background-color: #848e85;
+    cursor: pointer;
 }
     
 ul {
@@ -53,7 +54,7 @@ ul {
 }
     
 li {
-    background-color: #ebd935;
+    background-color: #63e7c0;
     padding: 10px;
     margin: 10px 0;
     border-radius: 5px;
@@ -64,11 +65,28 @@ li {
 }
     
 li:hover {
-    background-color: #a99e3b;
+    background-color: #ffffff;
+    cursor: pointer;
 }
 
-/* Existing CSS Code */
 .completed {
     text-decoration: line-through;
     opacity: 0.5;
+}
+
+li.task-item {
+    position: relative;
+    padding-right: 40px; 
+}
+
+.deleteButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgb(0, 0, 0); 
+    color: #fff; 
+    border: none;
+    border-radius: 2px;
+    padding: 5px 10px;
+    cursor: pointer;
 }
