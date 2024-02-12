@@ -2,24 +2,20 @@
 const taskList = document.getElementById('taskList');
 
 // marking tasks as completed
-function markAsCompleted(event) {
+taskList.addEventListener('click', function(event) {
     const listItem = event.target.closest('li');
     if (listItem) {
         listItem.classList.toggle('completed');
     }
-}
+});
 
 // deleting completed tasks
-function deleteCompletedTasks() {
+ document.getElementById('deleteCompletedButton').addEventListener('click', function(){
     const completedTasks = document.querySelectorAll('.completed');
     completedTasks.forEach(task => {
         task.remove();
     });
-}
-
-taskList.addEventListener('click', markAsCompleted);
-
-document.getElementById('deleteCompletedButton').addEventListener('click', deleteCompletedTasks);
+});
 
 
 // To add document by either pressing the enter button or by clicking on the add task button.
